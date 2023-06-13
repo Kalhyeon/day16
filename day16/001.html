@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>three-layer layout</title>
+  <style>
+    * {padding: 0; margin: 0;}
+    #page {width: 800px; margin: 0 auto;}
+    header {height: 35px; background-color: red;}
+    footer {height: 35px; background-color: blueviolet;}
+    nav ul {list-style: none; display: flex; flex-direction: column;}
+    /* nav 를 붙이지 않으면 모든 ul 을 다 바꾸기 때문에 nav ul 로 스타일을 지정한다.
+      flex-direction: column; 은 flex 의 기본 정렬 방향인 좌-우 를 상-하 로 바꾼다. 
+      여담으로 column 대신 reverse 를 사용하면 column 과 반대로 하-상 으로 바꾼다.
+      요소는 상-하, 좌-우 로 배치한다.
+      상-하 로 배치되는 요소들을 좌에서 우로 배치하려면 => display: inline-block;
+      요소를 좌/우 로 배치하려면 => float: left;, float: right;
+      요소를 원하는 위치에 배치하려면 => position */
+    nav li {width: 120px; height: 35px; background-color: skyblue;}
+  </style>
+</head>
+<body>
+  <div id="page">
+    <header></header>
+    <nav>
+      <ul>
+        <li>AAA</li>
+        <li>BBB</li>
+        <li>CCC</li>
+      </ul>
+    </nav>
+    <main>
+      <aside></aside>
+      <section>
+      </section>
+      <aside></aside>
+    </main>
+    <footer></footer>
+  </div>
+</body>
+</html>

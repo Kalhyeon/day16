@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!--
+    get : 서버의 상태를 변경하지 않는다 (여러 번 실행해도 된다).
+    post : 서버의 상태를 변경한다 (여러 번 실행하면 안된다).
+  -->
+  <h1>form method:get</h1>
+  <form action="#" method="" enctype=""> <!-- enctype 속성을 지정하지 않으면 기본값은 urlencoded 이다. -->
+    <input type="text" name="username" placeholder="이름 입력" size="20" maxlength="10">
+    <!-- size 는 너비 (글자 수 만큼), maxlength 는 최대로 입력받을 수 있는 글자의 개수이다. -->
+    <input type="submit" value="get">
+    <!-- 값이 넘어간다 (?username=username#) -->
+  </form>
+  <h1>form method:post</h1>
+  <form method="post">
+    <input type="text" name="username" placeholder="이름 입력" size="20" maxlength="10">
+    <input type="submit" value="post">
+    <!-- 값이 넘어가지 않는다 (에러 발생). -->
+  </form>
+</body>
+</html>

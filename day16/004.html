@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML 정리 1</title>
+  <style>
+    div {border: 1px solid red; width: 100px; height: 100px;}
+    #left {padding: 20px;}
+    * {
+      /* reset */
+      margin: 0; padding: 0; box-sizing: border-box;
+    }
+  </style>
+</head>
+<body>
+  <!--
+    html 은 요소로 구성된다.
+    요소는 tag, 내용, 속성으로 구성된다.
+    요소는 사각형으로 나타나는데, 이것을 box model 이라고 한다.
+    box model 은 margin, border, padding, content 로 구성된다.
+    width 는 content 의 너비이다 => content + padding + border 로 너비를 계산한다.
+                                 border-box
+  -->
+  <div id="left">
+    우리나라
+  </div>
+  <div>
+    좋은 나라
+  </div>
+</body>
+</html>
